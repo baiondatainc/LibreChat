@@ -50,12 +50,13 @@ const ArtifactButton = ({ artifact }: { artifact: Artifact | null }) => {
     };
   }, [artifact, location.pathname]);
 
-  // Register artifact in store so version tracking still works
+  // Register artifact in store — but never open the side panel
   useEffect(() => {
     if (artifact == null || artifact?.id == null || artifact.id === '') {
       return;
     }
     setCurrentArtifactId(artifact.id);
+    setVisible(false);          // ← keep side panel closed always
     if (artifacts?.[artifact.id] == null) {
       setArtifacts(visibleArtifacts);
     }
