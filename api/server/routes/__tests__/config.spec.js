@@ -238,12 +238,12 @@ describe('GET /api/config', () => {
 
     it('should include shared env var fields', async () => {
       mockGetAppConfig.mockResolvedValue(baseAppConfig);
-      process.env.APP_TITLE = 'Insurance Authority';
+      process.env.APP_TITLE = 'Department of Finance';
       const app = createApp(null);
 
       const response = await request(app).get('/api/config');
 
-      expect(response.body.appTitle).toBe('Insurance Authority');
+      expect(response.body.appTitle).toBe('Department of Finance');
       expect(response.body).toHaveProperty('emailLoginEnabled');
       expect(response.body).toHaveProperty('serverDomain');
     });

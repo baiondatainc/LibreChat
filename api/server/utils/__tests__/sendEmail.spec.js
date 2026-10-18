@@ -21,7 +21,7 @@ beforeEach(() => {
   process.env.EMAIL_HOST = 'smtp.example.com';
   process.env.EMAIL_PORT = '587';
   process.env.EMAIL_FROM = 'noreply@example.com';
-  process.env.APP_TITLE = 'Insurance Authority';
+  process.env.APP_TITLE = 'Department of Finance';
   delete process.env.EMAIL_USERNAME;
   delete process.env.EMAIL_PASSWORD;
   delete process.env.MAILGUN_API_KEY;

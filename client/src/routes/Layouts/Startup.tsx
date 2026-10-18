@@ -44,7 +44,7 @@ export default function StartupLayout({ isAuthenticated }: { isAuthenticated?: b
   }, [isAuthenticated, navigate, data]);
 
   useEffect(() => {
-    document.title = startupConfig?.appTitle || 'Insurance Authority';
+    document.title = startupConfig?.appTitle || 'Department of Finance';
   }, [startupConfig?.appTitle]);
 
   useEffect(() => {
